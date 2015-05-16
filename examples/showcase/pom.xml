@@ -401,12 +401,7 @@
 		<!-- jetty for functional test and executable war -->
 		<dependency>
 			<groupId>org.eclipse.jetty.aggregate</groupId>
-			<artifactId>jetty-webapp</artifactId>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.eclipse.jetty</groupId>
-			<artifactId>jetty-jsp</artifactId>
+			<artifactId>jetty-all</artifactId>
 			<scope>provided</scope>
 		</dependency>
 		
@@ -480,6 +475,7 @@
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>cobertura-maven-plugin</artifactId>
 				<configuration>
+					<check></check>
 					<instrumentation>
 						<excludes>
 							<exclude>**/entity/*.class</exclude>
@@ -493,7 +489,7 @@
 
 			<!-- jetty插件, 设定context path与spring profile -->
 			<plugin>
-				<groupId>org.mortbay.jetty</groupId>
+				<groupId>org.eclipse.jetty</groupId>
 				<artifactId>jetty-maven-plugin</artifactId>
 				<configuration>
 					<systemProperties>
@@ -585,7 +581,7 @@
 					<plugin>
 						<groupId>org.scalatest</groupId>
 						<artifactId>scalatest-maven-plugin</artifactId>
-						<version>1.0-RC2</version>
+						<version>1.0</version>
 						<configuration>
 							<reportsDirectory>${project.build.directory}/surefire-reports</reportsDirectory>
 							<junitxml>.</junitxml>
