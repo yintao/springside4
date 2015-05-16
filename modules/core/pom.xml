@@ -55,6 +55,10 @@
 			<artifactId>javax.servlet-api</artifactId>
 			<optional>true</optional>
 		</dependency>
+		<dependency>
+			<groupId>javax.el</groupId>
+			<artifactId>javax.el-api</artifactId>
+		</dependency>
 		<!-- Wed end -->
 
 		<!-- UTILS begin -->
@@ -127,7 +131,7 @@
 		<!-- TEST MODULE begin -->
 		<dependency>
 			<groupId>org.eclipse.jetty.aggregate</groupId>
-			<artifactId>jetty-webapp</artifactId>
+			<artifactId>jetty-all</artifactId>
 		</dependency>
 
 		<dependency>
