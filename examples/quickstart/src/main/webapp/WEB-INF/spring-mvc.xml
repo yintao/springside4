@@ -33,6 +33,7 @@
 		<property name="suffix" value=".jsp"/>
 	</bean>
 
+	<!-- 以下为freemarker的相关配置，如果使用freemarker请把注释去掉即可 -->
 	<!-- freemarker config -->
 	<bean id="freemarkerConfig" class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
 		<property name="templateLoaderPath" value="/WEB-INF/views/"/>
@@ -55,8 +56,7 @@
 	<bean id="fmXmlEscape" class="freemarker.template.utility.XmlEscape"/>
 
 	<!--
-	View resolvers can also be configured with ResourceBundles or XML files. If you need
-	different view resolving based on Locale, you have to use the resource bundle resolver.
+	freemarker的order顺序一定早于jsp，否则不能正确查到
 	-->
 	<bean id="viewResolver" class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">
 		<property name="cache" value="true"/>
