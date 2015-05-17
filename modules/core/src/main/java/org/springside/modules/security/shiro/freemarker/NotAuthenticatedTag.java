@@ -1,3 +1,6 @@
+/**
+ * https://github.com/jagregory/shiro-freemarker-tags
+ */
 package org.springside.modules.security.shiro.freemarker;
 
 import freemarker.core.Environment;

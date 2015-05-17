@@ -1,3 +1,6 @@
+/**
+ *
+ */
 package org.springside.modules.security.shiro.freemarker;
 
 /**

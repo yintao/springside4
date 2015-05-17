@@ -6,7 +6,8 @@ import org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer;
 import java.io.IOException;
 
 /**
- * @author yintao  yin.tao@foxmail.com
+ * 支持shiro tag 的freemarker configurer
+ * @author yintao
  */
 public class ShiroTagFreeMarkerConfigurer extends FreeMarkerConfigurer {
 
