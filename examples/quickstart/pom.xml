@@ -132,9 +132,20 @@
 		<!-- WEB end -->
 
 		<!-- template engine begin-->
+		<!-- 如果要使用freemarker请去掉注释
 		<dependency>
 			<groupId>org.freemarker</groupId>
 			<artifactId>freemarker</artifactId>
+		</dependency>
+        -->
+
+		<dependency>
+			<groupId>org.thymeleaf</groupId>
+			<artifactId>thymeleaf</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.thymeleaf</groupId>
+			<artifactId>thymeleaf-spring4</artifactId>
 		</dependency>
 
 		<!-- template engine end-->
