@@ -110,6 +110,11 @@
 		</dependency>
 
 		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context-support</artifactId>
+		</dependency>
+
+		<dependency>
 			<groupId>opensymphony</groupId>
 			<artifactId>sitemesh</artifactId>
 			<scope>runtime</scope>
@@ -125,6 +130,14 @@
 			<artifactId>javax.servlet-api</artifactId>
 		</dependency>
 		<!-- WEB end -->
+
+		<!-- template engine begin-->
+		<dependency>
+			<groupId>org.freemarker</groupId>
+			<artifactId>freemarker</artifactId>
+		</dependency>
+
+		<!-- template engine end-->
 
 		<!-- SECURITY begin -->
 		<dependency>
