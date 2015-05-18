@@ -64,6 +64,11 @@
 			<groupId>javax.el</groupId>
 			<artifactId>javax.el-api</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>opensymphony</groupId>
+			<artifactId>sitemesh</artifactId>
+			<scope>provided</scope>
+		</dependency>
 		<!-- Wed end -->
 
 		<!-- template engine -->
