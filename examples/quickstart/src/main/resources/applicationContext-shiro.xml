@@ -28,7 +28,9 @@
 				/static/** = anon
 				/api/** = anon
 				/register/** = anon
-				/freemarker = anon
+				/ftl = anon
+				/th = anon
+				/jsp = anon
 				/admin/** = roles[admin]
 				/** = user
 			</value>
