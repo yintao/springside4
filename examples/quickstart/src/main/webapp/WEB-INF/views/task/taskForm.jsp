@@ -3,7 +3,7 @@
 <c:set var="ctx" value="${pageContext.request.contextPath}"/>
 <html>
 <head>
-	<title>任务管理</title>
+	<title>任务管理jsp</title>
 </head>
 
 <body>

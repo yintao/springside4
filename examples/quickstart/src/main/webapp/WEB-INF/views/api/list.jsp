@@ -9,7 +9,7 @@
 
 <body>
 
-<h3>Restful API 列表</h3>
+<h3>Restful API 列表 jsp</h3>
 <h4>查询 API</h4>
 <ul>
 	<li>获取任务列表 ： <a href="${reqUrl}/api/v1/task">${reqUrl}/api/v1/task</a></li>

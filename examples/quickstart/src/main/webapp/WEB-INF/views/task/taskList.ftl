@@ -17,7 +17,6 @@ ${base!}
 		</form>
 	</div>
 	<@tags.sort sortTypes=sortTypes sortType=sortType searchParams=searchParams />
-	<#--<@tags.sort/>-->
 </div>
 
 <table id="contentTable" class="table table-striped table-bordered table-condensed">
@@ -25,15 +24,15 @@ ${base!}
 	<tbody>
 	<#list tasks.content as task>
 		<tr>
-			<td><a href="${ctx!}/task/update/${task.id!}">${task.title!}</a></td>
-			<td><a href="${ctx!}/task/delete/${task.id!}">删除</a></td>
+			<td><a href="${request.contextPath!}/task/update/${task.id!}">${task.title!}</a></td>
+			<td><a href="${request.contextPath!}/task/delete/${task.id!}">删除</a></td>
 		</tr>
 	</#list>
 	</tbody>
 </table>
 
-<#--<@tags.pagination page=tasks paginationSize=5/>-->
+<@tags.pagination page=tasks pageSize=5 sortType=sortType searchParams=searchParams/>
 
-<div><a class="btn" href="${ctx!}/task/create">创建任务</a></div>
+<div><a class="btn" href="${request.contextPath!}/task/create">创建任务</a></div>
 </body>
 </html>

@@ -7,7 +7,7 @@
 
 <html>
 <head>
-	<title>登录页</title>
+	<title>登录页 jsp</title>
 </head>
 
 <body>

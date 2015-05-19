@@ -1,10 +1,6 @@
-<%@ page contentType="text/html;charset=UTF-8" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<c:set var="ctx" value="${pageContext.request.contextPath}"/>
-
 <html>
 <head>
-	<title>用户注册 jsp</title>
+	<title>用户注册</title>
 	
 	<script>
 		$(document).ready(function() {
@@ -14,7 +10,7 @@
 			$("#inputForm").validate({
 				rules: {
 					loginName: {
-						remote: "${ctx}/register/checkLoginName"
+						remote: "${request.contextPath}/register/checkLoginName"
 					}
 				},
 				messages: {
@@ -28,7 +24,7 @@
 </head>
 
 <body>
-	<form id="inputForm" action="${ctx}/register" method="post" class="form-horizontal">
+	<form id="inputForm" action="${request.contextPath}/register" method="post" class="form-horizontal">
 		<fieldset>
 			<legend><small>用户注册</small></legend>
 			<div class="control-group">

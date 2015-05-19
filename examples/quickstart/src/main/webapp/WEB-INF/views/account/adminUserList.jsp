@@ -5,7 +5,7 @@
 
 <html>
 <head>
-	<title>用户管理</title>
+	<title>用户管理 jsp</title>
 </head>
 
 <body>
