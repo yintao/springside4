@@ -11,6 +11,8 @@ import javax.servlet.ServletRequest;
 import javax.validation.Valid;
 
 import org.apache.shiro.SecurityUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Controller;
@@ -45,9 +47,12 @@ import com.google.common.collect.Maps;
 @RequestMapping(value = "/task")
 public class TaskController {
 
+	private final static Logger logger = LoggerFactory.getLogger(TaskController.class);
+
 	private static final String PAGE_SIZE = "3";
 
 	private static Map<String, String> sortTypes = Maps.newLinkedHashMap();
+
 	static {
 		sortTypes.put("auto", "自动");
 		sortTypes.put("title", "标题");
@@ -58,11 +63,11 @@ public class TaskController {
 
 	@RequestMapping(method = RequestMethod.GET)
 	public String list(@RequestParam(value = "page", defaultValue = "1") int pageNumber,
-			@RequestParam(value = "page.size", defaultValue = PAGE_SIZE) int pageSize,
-			@RequestParam(value = "sortType", defaultValue = "auto") String sortType, Model model,
-			ServletRequest request) {
+	                   @RequestParam(value = "page.size", defaultValue = PAGE_SIZE) int pageSize,
+	                   @RequestParam(value = "sortType", defaultValue = "auto") String sortType, Model model,
+	                   ServletRequest request) {
 		Map<String, Object> searchParams = Servlets.getParametersStartingWith(request, "search_");
-		Long userId = getCurrentUserId();
+		Long                userId       = getCurrentUserId();
 
 		Page<Task> tasks = taskService.getUserTask(userId, searchParams, pageNumber, pageSize, sortType);
 

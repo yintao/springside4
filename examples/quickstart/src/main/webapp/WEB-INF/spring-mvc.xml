@@ -49,12 +49,14 @@
 				<entry key="xml_escape" value-ref="fmXmlEscape" />
 			</map>
 		</property>
+
 		<property name="defaultEncoding" value="UTF-8"/>
+
 		<property name="freemarkerSettings">
 			<props>
-				<prop key="template_update_delay">1</prop>
+				<prop key="template_update_delay">0</prop>
+				<prop key="defaultEncoding">UTF-8</prop>
 				<prop key="url_escaping_charset">UTF-8</prop>
-				<prop key="locale">zh_CN</prop>
 				<prop key="datetime_format">yyyy-MM-dd HH:mm:ss</prop>
 				<prop key="date_format">yyyy-MM-dd</prop>
 				<prop key="time_format">HH:mm:ss</prop>
@@ -65,14 +67,17 @@
 	</bean>
 	<bean id="fmXmlEscape" class="freemarker.template.utility.XmlEscape"/>
 
-	<!--
-	freemarker的order顺序一定早于jsp，否则不能正确查到
-	-->
+	<!-- freemarker -->
 	<bean id="viewResolver" class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">
+		<property name="contentType" value="text/html; charset=UTF-8"/>
 		<property name="cache" value="true"/>
 		<property name="order" value="1" />
 		<property name="prefix" value=""/>
 		<property name="suffix" value=".ftl"/>
+		<property name="requestContextAttribute" value="request" />
+		<property name="exposeRequestAttributes" value="true" />
+		<property name="exposeSessionAttributes" value="true" />
+		<property name="exposeSpringMacroHelpers" value="true" />
 	</bean>
 
 	<!-- 定义JSP文件的位置 -->
@@ -97,4 +102,5 @@
             </props>  
 		</property>  
     </bean>
+
 </beans>

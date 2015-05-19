@@ -24,6 +24,7 @@ public class FreemarkerShiroDecoratorServlet extends FreemarkerDecoratorServlet 
 	                                     Template template,
 	                                     TemplateModel templateModel)
 			throws ServletException, IOException {
+
 		boolean    result   = super.preTemplateProcess(request, response, template, templateModel);
 		SimpleHash hash     = (SimpleHash) templateModel;
 		hash.put("shiro", new ShiroTags());
