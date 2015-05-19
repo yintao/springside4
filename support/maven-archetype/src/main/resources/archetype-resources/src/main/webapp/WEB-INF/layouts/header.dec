@@ -1,0 +1,27 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<div id="header">
+	<div id="title">
+	    <h1><a href="${symbol_dollar}{base}">QuickStart示例</a><small>--TodoList应用演示</small>
+	    <@shiro.user>
+			<div class="btn-group pull-right">
+				<a class="btn dropdown-toggle" data-toggle="dropdown" href="${symbol_pound}">
+					<i class="icon-user"></i> <@shiro.principal property="name"/>
+					<span class="caret"></span>
+				</a>
+
+				<ul class="dropdown-menu">
+					<@shiro.hasRole name="admin">
+						<li><a href="${symbol_dollar}{base}/admin/user">Admin Users</a></li>
+						<li class="divider"></li>
+					</@shiro.hasRole>
+					<li><a href="${symbol_dollar}{base}/api">APIs</a></li>
+					<li><a href="${symbol_dollar}{base}/profile">Edit Profile</a></li>
+					<li><a href="${symbol_dollar}{base}/logout">Logout</a></li>
+				</ul>
+			</div>
+		</@shiro.user>
+		</h1>
+	</div>
+</div>

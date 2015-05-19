@@ -1,0 +1,35 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<!DOCTYPE html>
+<html>
+<head lang="zh-CN">
+<title>QuickStart示例:${symbol_dollar}{title}</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta http-equiv="Cache-Control" content="no-store" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+
+<link type="image/x-icon" href="${symbol_dollar}{base}/static/images/favicon.ico" rel="shortcut icon">
+<link href="${symbol_dollar}{base}/static/bootstrap/2.3.2/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+<link href="${symbol_dollar}{base}/static/jquery-validation/1.11.1/validate.css" type="text/css" rel="stylesheet" />
+<link href="${symbol_dollar}{base}/static/styles/default.css" type="text/css" rel="stylesheet" />
+<script src="${symbol_dollar}{base}/static/jquery/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="${symbol_dollar}{base}/static/jquery-validation/1.11.1/jquery.validate.min.js" type="text/javascript"></script>
+<script src="${symbol_dollar}{base}/static/jquery-validation/1.11.1/messages_bs_zh.js" type="text/javascript"></script>
+
+
+${symbol_dollar}{head}
+</head>
+
+<body>
+	<div class="container">
+		<${symbol_pound}include "/WEB-INF/layouts/header.dec">
+		<div id="content">
+		${symbol_dollar}{body}
+		</div>
+		<${symbol_pound}include "/WEB-INF/layouts/footer.dec">
+	</div>
+	<script src="${symbol_dollar}{base}/static/bootstrap/2.3.2/js/bootstrap.min.js" type="text/javascript"></script>
+</body>
+</html>

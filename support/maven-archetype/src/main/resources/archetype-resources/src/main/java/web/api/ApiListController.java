@@ -16,7 +16,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @RequestMapping(value = "/api")
 public class ApiListController {
 	@RequestMapping(method = RequestMethod.GET)
-	public String list() {
+	public String list(HttpServletRequest request, Model model) {
+		String ctx = "http://" + request.getServerName() + ":"
+		             + request.getServerPort()
+		             + request.getContextPath();
+		model.addAttribute("ctx", ctx);
 		return "api/list";
 	}
 }

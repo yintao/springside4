@@ -1,10 +1,6 @@
 #set( $symbol_pound = '#' )
 #set( $symbol_dollar = '$' )
 #set( $symbol_escape = '\' )
-<%@ page contentType="text/html;charset=UTF-8" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<c:set var="ctx" value="${symbol_dollar}{pageContext.request.contextPath}"/>
-
 <html>
 <head>
 	<title>用户注册</title>
@@ -17,7 +13,7 @@
 			${symbol_dollar}("${symbol_pound}inputForm").validate({
 				rules: {
 					loginName: {
-						remote: "${symbol_dollar}{ctx}/register/checkLoginName"
+						remote: "${symbol_dollar}{request.contextPath}/register/checkLoginName"
 					}
 				},
 				messages: {
@@ -31,7 +27,7 @@
 </head>
 
 <body>
-	<form id="inputForm" action="${symbol_dollar}{ctx}/register" method="post" class="form-horizontal">
+	<form id="inputForm" action="${symbol_dollar}{request.contextPath}/register" method="post" class="form-horizontal">
 		<fieldset>
 			<legend><small>用户注册</small></legend>
 			<div class="control-group">
